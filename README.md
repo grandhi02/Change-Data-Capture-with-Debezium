@@ -77,7 +77,7 @@ kafka-console-consumer --bootstrap-server localhost:9092 --topic data-quality-dl
 #### 8. Check metrics
 curl http://localhost:8000/metrics
 
-After successful Debezium, 
+After successful Debezium container startup, 
 
 The logs from Debezium container:
 ```
