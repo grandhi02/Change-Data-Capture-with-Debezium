@@ -77,7 +77,7 @@ kafka-console-consumer --bootstrap-server localhost:9092 --topic data-quality-dl
 #### 8. Check metrics
 curl http://localhost:8000/metrics
 
-After successful Debezium container startup, 
+After successful Debezium container startup, debezium_offsets, debezium_configs, debezium_statuses kafka topics are created from Debezium with same cleanup policy
 
 The logs from Debezium container:
 ```
