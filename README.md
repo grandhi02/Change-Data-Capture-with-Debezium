@@ -361,33 +361,4 @@ sh-4.4$ kafka-console-consumer --bootstrap-server localhost:9092 --topic data-qu
   │  }                                                                         │
   └────────────────────────────────────────────────────────────────────────────┘
 
-
-  ┌──────────────────────────────────────────────────────────────────────┐
-  │                     DLQ REPLAY WORKFLOW                              │
-  │                                                                      │
-  │   1. Alert fires                                                     │
-  │      │                                                               │
-  │      ▼                                                               │
-  │   2. Engineer investigates DLQ records                               │
-  │      │                                                               │
-  │      ▼                                                               │
-  │   3. Root cause found (e.g., bad deployment, migration bug)          │
-  │      │                                                               │
-  │      ▼                                                               │
-  │   4. Fix deployed to source system (Postgres)                        │
-  │      │                                                               │
-  │      ▼                                                               │
-  │   5. Run replay script:                                              │
-  │      python replay_dlq.py                                            │
-  │      │                                                               │
-  │      ▼                                                               │
-  │   6. DLQ records replayed back to source Kafka topic                 │
-  │      │                                                               │
-  │      ▼                                                               │
-  │   7. Quality consumer re-validates                                   │
-  │      │                                                               │
-  │      ├── ✅ Pass ──► Downstream (recovered!)                         │
-  │      └── ❌ Fail ──► DLQ again (still broken, investigate more)      │
-  │                                                                      │
-  └──────────────────────────────────────────────────────────────────────┘
 ```
