@@ -1,0 +1,77 @@
+2026-03-02 18:48:50 | INFO     | metrics | Metrics server started on port 8000
+2026-03-02 18:48:50 | INFO     | __main__ | Prometheus metrics available at http://localhost:8000/metrics
+2026-03-02 18:48:50 | INFO     | kafkaconsumer | Subscribed to topics: ['cdc.public.orders', 'cdc.public.customers']
+2026-03-02 18:48:50 | INFO     | kafkaconsumer | DLQ topic: data-quality-dlq
+2026-03-02 18:48:50 | INFO     | kafkaconsumer | Consumer started. Waiting for messages...
+2026-03-02 18:48:50 | ERROR    | kafkaconsumer | Consumer error: KafkaError{code=UNKNOWN_TOPIC_OR_PART,val=3,str="Subscribed topic not available: cdc.public.customers: Broker: Unknown topic or partition"}
+2026-03-02 18:48:50 | ERROR    | kafkaconsumer | Consumer error: KafkaError{code=UNKNOWN_TOPIC_OR_PART,val=3,str="Subscribed topic not available: cdc.public.orders: Broker: Unknown topic or partition"}
+2026-03-02 19:04:03 | INFO     | kafkaconsumer | Shutdown requested...
+2026-03-02 19:04:03 | INFO     | kafkaconsumer | Consumer stopped.
+2026-03-02 19:04:05 | INFO     | metrics | Metrics server started on port 8000
+2026-03-02 19:04:05 | INFO     | __main__ | Prometheus metrics available at http://localhost:8000/metrics
+2026-03-02 19:04:05 | INFO     | kafkaconsumer | Subscribed to topics: ['cdc.public.orders', 'cdc.public.customers']
+2026-03-02 19:04:05 | INFO     | kafkaconsumer | DLQ topic: data-quality-dlq
+2026-03-02 19:04:05 | INFO     | kafkaconsumer | Consumer started. Waiting for messages...
+2026-03-02 19:04:05 | ERROR    | kafkaconsumer | Consumer error: KafkaError{code=UNKNOWN_TOPIC_OR_PART,val=3,str="Subscribed topic not available: cdc.public.customers: Broker: Unknown topic or partition"}
+2026-03-02 19:04:05 | ERROR    | kafkaconsumer | Consumer error: KafkaError{code=UNKNOWN_TOPIC_OR_PART,val=3,str="Subscribed topic not available: cdc.public.orders: Broker: Unknown topic or partition"}
+2026-03-02 19:04:20 | INFO     | kafkaconsumer | Shutdown requested...
+2026-03-02 19:04:20 | INFO     | kafkaconsumer | Consumer stopped.
+2026-03-02 19:04:23 | INFO     | metrics | Metrics server started on port 8000
+2026-03-02 19:04:23 | INFO     | __main__ | Prometheus metrics available at http://localhost:8000/metrics
+2026-03-02 19:04:23 | INFO     | kafkaconsumer | Subscribed to topics: ['cdc.public.orders', 'cdc.public.customers']
+2026-03-02 19:04:23 | INFO     | kafkaconsumer | DLQ topic: data-quality-dlq
+2026-03-02 19:04:23 | INFO     | kafkaconsumer | Consumer started. Waiting for messages...
+2026-03-02 19:04:23 | ERROR    | kafkaconsumer | Consumer error: KafkaError{code=UNKNOWN_TOPIC_OR_PART,val=3,str="Subscribed topic not available: cdc.public.customers: Broker: Unknown topic or partition"}
+2026-03-02 19:04:23 | ERROR    | kafkaconsumer | Consumer error: KafkaError{code=UNKNOWN_TOPIC_OR_PART,val=3,str="Subscribed topic not available: cdc.public.orders: Broker: Unknown topic or partition"}
+2026-03-02 19:30:30 | INFO     | kafkaconsumer | Shutdown requested...
+2026-03-02 19:30:30 | INFO     | kafkaconsumer | Consumer stopped.
+2026-03-02 19:31:12 | INFO     | metrics | Metrics server started on port 8000
+2026-03-02 19:31:12 | INFO     | __main__ | Prometheus metrics available at http://localhost:8000/metrics
+2026-03-02 19:31:12 | INFO     | kafkaconsumer | Subscribed to topics: ['cdc.public.orders', 'cdc.public.customers']
+2026-03-02 19:31:12 | INFO     | kafkaconsumer | DLQ topic: data-quality-dlq
+2026-03-02 19:31:12 | INFO     | kafkaconsumer | Consumer started. Waiting for messages...
+2026-03-02 19:31:12 | ERROR    | kafkaconsumer | Consumer error: KafkaError{code=UNKNOWN_TOPIC_OR_PART,val=3,str="Subscribed topic not available: cdc.public.customers: Broker: Unknown topic or partition"}
+2026-03-02 19:31:12 | ERROR    | kafkaconsumer | Consumer error: KafkaError{code=UNKNOWN_TOPIC_OR_PART,val=3,str="Subscribed topic not available: cdc.public.orders: Broker: Unknown topic or partition"}
+2026-03-02 19:31:22 | INFO     | kafkaconsumer | Shutdown requested...
+2026-03-02 19:31:22 | INFO     | kafkaconsumer | Consumer stopped.
+2026-03-02 19:39:13 | INFO     | metrics | Metrics server started on port 8000
+2026-03-02 19:39:13 | INFO     | __main__ | Prometheus metrics available at http://localhost:8000/metrics
+2026-03-02 19:39:13 | INFO     | kafkaconsumer | Subscribed to topics: ['cdc.public.orders', 'cdc.public.customers']
+2026-03-02 19:39:13 | INFO     | kafkaconsumer | DLQ topic: data-quality-dlq
+2026-03-02 19:39:13 | INFO     | kafkaconsumer | Consumer started. Waiting for messages...
+2026-03-02 19:40:39 | WARNING  | dlq_handler | Record sent to DLQ | topic=cdc.public.customers | key=b'{"schema":{"type":"struct","fields":[{"type":"int32","optional":false,"default":0,"field":"id"}],"optional":false,"name":"cdc.public.customers.Key"},"payload":{"id":1}}' | errors=1
+2026-03-02 19:40:39 | ERROR    | kafkaconsumer | Invalid record → DLQ | topic=cdc.public.customers | key=None | errors=[{'check': 'payload_exists', 'field': 'after', 'severity': 'critical', 'message': "Event has no 'after' payload"}]
+2026-03-02 19:40:39 | WARNING  | dlq_handler | Record sent to DLQ | topic=cdc.public.customers | key=b'{"schema":{"type":"struct","fields":[{"type":"int32","optional":false,"default":0,"field":"id"}],"optional":false,"name":"cdc.public.customers.Key"},"payload":{"id":2}}' | errors=1
+2026-03-02 19:40:39 | ERROR    | kafkaconsumer | Invalid record → DLQ | topic=cdc.public.customers | key=None | errors=[{'check': 'payload_exists', 'field': 'after', 'severity': 'critical', 'message': "Event has no 'after' payload"}]
+2026-03-02 19:40:47 | WARNING  | dlq_handler | Record sent to DLQ | topic=cdc.public.orders | key=b'{"schema":{"type":"struct","fields":[{"type":"int32","optional":false,"default":0,"field":"id"}],"optional":false,"name":"cdc.public.orders.Key"},"payload":{"id":1}}' | errors=1
+2026-03-02 19:40:47 | ERROR    | kafkaconsumer | Invalid record → DLQ | topic=cdc.public.orders | key=None | errors=[{'check': 'payload_exists', 'field': 'after', 'severity': 'critical', 'message': "Event has no 'after' payload"}]
+2026-03-02 19:40:47 | WARNING  | dlq_handler | Record sent to DLQ | topic=cdc.public.orders | key=b'{"schema":{"type":"struct","fields":[{"type":"int32","optional":false,"default":0,"field":"id"}],"optional":false,"name":"cdc.public.orders.Key"},"payload":{"id":2}}' | errors=1
+2026-03-02 19:40:47 | ERROR    | kafkaconsumer | Invalid record → DLQ | topic=cdc.public.orders | key=None | errors=[{'check': 'payload_exists', 'field': 'after', 'severity': 'critical', 'message': "Event has no 'after' payload"}]
+2026-03-02 19:41:18 | WARNING  | dlq_handler | Record sent to DLQ | topic=cdc.public.orders | key=b'{"schema":{"type":"struct","fields":[{"type":"int32","optional":false,"default":0,"field":"id"}],"optional":false,"name":"cdc.public.orders.Key"},"payload":{"id":3}}' | errors=1
+2026-03-02 19:41:18 | ERROR    | kafkaconsumer | Invalid record → DLQ | topic=cdc.public.orders | key=None | errors=[{'check': 'payload_exists', 'field': 'after', 'severity': 'critical', 'message': "Event has no 'after' payload"}]
+2026-03-02 20:23:28 | INFO     | metrics | Metrics server started on port 8000
+2026-03-02 20:23:28 | INFO     | __main__ | Prometheus metrics available at http://localhost:8000/metrics
+2026-03-02 20:23:28 | INFO     | kafkaconsumer | Subscribed to topics: ['cdc.public.orders', 'cdc.public.customers']
+2026-03-02 20:23:28 | INFO     | kafkaconsumer | DLQ topic: data-quality-dlq
+2026-03-02 20:23:28 | INFO     | kafkaconsumer | Consumer started. Waiting for messages...
+2026-03-02 20:28:15 | WARNING  | dlq_handler | Record sent to DLQ | topic=cdc.public.orders | key=b'{"schema":{"type":"struct","fields":[{"type":"int32","optional":false,"default":0,"field":"id"}],"optional":false,"name":"cdc.public.orders.Key"},"payload":{"id":4}}' | errors=1
+2026-03-02 20:28:15 | ERROR    | kafkaconsumer | Invalid record → DLQ | topic=cdc.public.orders | key=None | errors=[{'check': 'payload_exists', 'field': 'after', 'severity': 'critical', 'message': "Event has no 'after' payload"}]
+2026-03-03 10:10:51 | INFO     | kafkaconsumer | Shutdown requested...
+2026-03-03 10:10:51 | INFO     | kafkaconsumer | Consumer stopped.
+2026-03-03 10:58:20 | INFO     | metrics | Metrics server started on port 8000
+2026-03-03 10:58:20 | INFO     | __main__ | Prometheus metrics available at http://localhost:8000/metrics
+2026-03-03 10:58:20 | INFO     | kafkaconsumer | Subscribed to topics: ['cdc.public.orders', 'cdc.public.customers']
+2026-03-03 10:58:20 | INFO     | kafkaconsumer | DLQ topic: data-quality-dlq
+2026-03-03 10:58:20 | INFO     | kafkaconsumer | Consumer started. Waiting for messages...
+2026-03-03 10:59:27 | WARNING  | dlq_handler | Record sent to DLQ | topic=cdc.public.orders | key=b'{"schema":{"type":"struct","fields":[{"type":"int32","optional":false,"default":0,"field":"id"}],"optional":false,"name":"cdc.public.orders.Key"},"payload":{"id":5}}' | errors=1
+2026-03-03 10:59:27 | ERROR    | kafkaconsumer | Invalid record → DLQ | topic=cdc.public.orders | key=None | errors=[{'check': 'payload_exists', 'field': 'after', 'severity': 'critical', 'message': "Event has no 'after' payload"}]
+2026-03-03 11:58:21 | WARNING  | dlq_handler | Record sent to DLQ | topic=cdc.public.orders | key=b'{"schema":{"type":"struct","fields":[{"type":"int32","optional":false,"default":0,"field":"id"}],"optional":false,"name":"cdc.public.orders.Key"},"payload":{"id":6}}' | errors=1
+2026-03-03 11:58:21 | ERROR    | kafkaconsumer | Invalid record → DLQ | topic=cdc.public.orders | key=None | errors=[{'check': 'payload_exists', 'field': 'after', 'severity': 'critical', 'message': "Event has no 'after' payload"}]
+2026-03-03 11:58:21 | WARNING  | dlq_handler | Record sent to DLQ | topic=cdc.public.orders | key=b'{"schema":{"type":"struct","fields":[{"type":"int32","optional":false,"default":0,"field":"id"}],"optional":false,"name":"cdc.public.orders.Key"},"payload":{"id":7}}' | errors=1
+2026-03-03 11:58:21 | ERROR    | kafkaconsumer | Invalid record → DLQ | topic=cdc.public.orders | key=None | errors=[{'check': 'payload_exists', 'field': 'after', 'severity': 'critical', 'message': "Event has no 'after' payload"}]
+2026-03-03 11:58:43 | WARNING  | dlq_handler | Record sent to DLQ | topic=cdc.public.orders | key=b'{"schema":{"type":"struct","fields":[{"type":"int32","optional":false,"default":0,"field":"id"}],"optional":false,"name":"cdc.public.orders.Key"},"payload":{"id":8}}' | errors=1
+2026-03-03 11:58:43 | ERROR    | kafkaconsumer | Invalid record → DLQ | topic=cdc.public.orders | key=None | errors=[{'check': 'payload_exists', 'field': 'after', 'severity': 'critical', 'message': "Event has no 'after' payload"}]
+2026-03-03 11:58:43 | WARNING  | dlq_handler | Record sent to DLQ | topic=cdc.public.orders | key=b'{"schema":{"type":"struct","fields":[{"type":"int32","optional":false,"default":0,"field":"id"}],"optional":false,"name":"cdc.public.orders.Key"},"payload":{"id":9}}' | errors=1
+2026-03-03 11:58:43 | ERROR    | kafkaconsumer | Invalid record → DLQ | topic=cdc.public.orders | key=None | errors=[{'check': 'payload_exists', 'field': 'after', 'severity': 'critical', 'message': "Event has no 'after' payload"}]
+2026-03-03 12:15:13 | WARNING  | dlq_handler | Record sent to DLQ | topic=cdc.public.orders | key=b'{"schema":{"type":"struct","fields":[{"type":"int32","optional":false,"default":0,"field":"id"}],"optional":false,"name":"cdc.public.orders.Key"},"payload":{"id":10}}' | errors=1
+2026-03-03 12:15:13 | ERROR    | kafkaconsumer | Invalid record → DLQ | topic=cdc.public.orders | key=None | errors=[{'check': 'payload_exists', 'field': 'after', 'severity': 'critical', 'message': "Event has no 'after' payload"}]
